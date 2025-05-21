@@ -2,10 +2,10 @@
     "name": "Decimal to Fraction",
     "short_name": "Dec2Frac",
     "description": "Convert decimals to fractions",
-    "start_url": "/",
+    "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#777676",
-    "theme_color": "#292929",
+    "background_color": "#f0f0f0",
+    "theme_color": "#007aff",
     "icons": [
         {
             "src": "icon.png",
