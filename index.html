@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Decimal to Fraction</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div class="container">
+        <h1>Decimal to Fraction</h1>
+        <div class="input-group">
+            <input type="text" id="valueInput" placeholder="Enter decimal" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" autocomplete="off" autofocus>
+            <div class="results">
+                <p id="fractionResult">Fraction: 0</p>
+            </div>
+        </div>
+        <div class="number-pad">
+            <button class="decimal">.</button>
+            <button class="number" value="7">7</button>
+            <button class="number" value="8">8</button>
+            <button class="number" value="9">9</button>
+            <button class="number" value="4">4</button>
+            <button class="number" value="5">5</button>
+            <button class="number" value="6">6</button>
+            <button class="number" value="1">1</button>
+            <button class="number" value="2">2</button>
+            <button class="number" value="3">3</button>
+            <button class="number" value="0">0</button>
+            <button class="clear">clr</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker registered', reg))
+                .catch(err => console.error('Service Worker registration failed', err));
+        }
+        // Fix iOS PWA focus issue
+        document.addEventListener('touchstart', (e) => {
+            const input = e.target.closest('input[type="text"]');
+            if (input) {
+                input.focus();
+            }
+        });
+    </script>
+</body>
+</html>

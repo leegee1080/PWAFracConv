@@ -1,0 +1,16 @@
+{
+    "name": "Decimal to Fraction",
+    "short_name": "Dec2Frac",
+    "description": "Convert decimals to fractions",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#777676",
+    "theme_color": "#292929",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

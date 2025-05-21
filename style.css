@@ -1,0 +1,109 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: rgb(119, 118, 118);
+    margin: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.container {
+    background: rgb(41, 41, 41);
+    padding: 16px;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.input-group {
+    margin: 12px 0;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #fff;
+    color: #000;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007aff;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+}
+
+.results {
+    margin-top: 12px;
+    text-align: left;
+}
+
+.results p {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.number-pad {
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px;
+    grid-template-rows: repeat(4, 40px);
+    grid-gap: 6px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.number-pad button {
+    width: 100%;
+    height: 40px;
+    background: #555;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.number-pad .decimal {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.number-pad .clear {
+    grid-column: 5;
+    grid-row: 4;
+}
+
+.number-pad .number[value="7"] { grid-column: 2; grid-row: 1; }
+.number-pad .number[value="8"] { grid-column: 3; grid-row: 1; }
+.number-pad .number[value="9"] { grid-column: 4; grid-row: 1; }
+.number-pad .number[value="4"] { grid-column: 2; grid-row: 2; }
+.number-pad .number[value="5"] { grid-column: 3; grid-row: 2; }
+.number-pad .number[value="6"] { grid-column: 4; grid-row: 2; }
+.number-pad .number[value="1"] { grid-column: 2; grid-row: 3; }
+.number-pad .number[value="2"] { grid-column: 3; grid-row: 3; }
+.number-pad .number[value="3"] { grid-column: 4; grid-row: 3; }
+.number-pad .number[value="0"] { grid-column: 2 / 5; grid-row: 4; }
